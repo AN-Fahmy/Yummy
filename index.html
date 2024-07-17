@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon Link -->
+    <link rel="shortcut icon" href="image/logo.png" type="image/x-icon">
+    <!-- Google Fonts Files -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Animations Style Files -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!-- Fontawesome Style Files -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <!-- Bootstrap Style Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Css Style File -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Yummy</title>
+</head>
+<body class="bg-black position-relative">
+    <!--####################### Loading Page Section #######################-->
+    <div class="loading position-fixed top-0 start-0 h-100 w-100 bg-black justify-content-center align-items-center">
+        <span class="loader"></span>
+    </div>
+
+    <!--####################### Navbar Section #######################-->
+    <nav class="navbar navbar-expand-lg py-0 text-white position-fixed bottom-0 start-0 w-100 bg-black z-3">
+        <div class="container">
+            <a class="navbar-brand text-white fw-bold" href=""><img src="image/logo.png" alt="Id"> Yummy</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon d-flex justify-content-center align-items-center"><i class="fa-solid fa-bars text-white fs-1"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item search"><a class="nav-link text-white" href="#search"><i class="fa-solid fa-magnifying-glass me-1"></i> Search</a></li>
+                    <li class="nav-item category"><a class="nav-link text-white" href="#category"><i class="fa-solid fa-list me-1"></i> Category</a></li>
+                    <li class="nav-item area"><a class="nav-link text-white" href="#area"><i class="fa-solid fa-house me-1"></i> Area</a></li>
+                    <li class="nav-item ingredients"><a class="nav-link text-white" href="#ingredients"><i class="fa-solid fa-drumstick-bite me-1"></i> Ingredients</a></li>
+                    <li class="nav-item contact-us"><a class="nav-link text-white" href="#contact-us"><i class="fa-solid fa-address-card me-1"></i> Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="social-icons">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="sideNav bg-black position-fixed h-100 d-flex justify-content-between align-items-start z-3">
+        <div class="links text-white py-2 px-3 h-100 d-flex flex-column justify-content-between">
+            <ul>
+                <li class="py-3 search"><a href="#search"><i class="fa-solid fa-magnifying-glass me-1"></i> Search</a></li>
+                <li class="py-3 category"><a href="#category"><i class="fa-solid fa-list me-1"></i> Category</a></li>
+                <li class="py-3 area"><a href="#area"><i class="fa-solid fa-house me-1"></i> Area</a></li>
+                <li class="py-3 ingredients"><a href="#ingredients"><i class="fa-solid fa-drumstick-bite me-1"></i> Ingredients</a></li>
+                <li class="py-3 contact-us"><a href="#contact-us"><i class="fa-solid fa-address-card me-1"></i> Contact Us</a></li>
+            </ul>
+            <div class="footer-Nav d-flex flex-column justify-content-center">
+                <div class="social-icons">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <div class="copyRight">
+                    Copyright Â© 2019 All Rights Reserved.
+                </div>
+            </div>
+        </div>
+
+        <div class="slide bg-light h-100 text-center d-flex flex-column justify-content-between align-items-center py-2">
+            <div class="logo">
+                <img src="image/logo.png" alt="Id">
+            </div>
+            <div class="toggleNav">
+                <i class="fa-solid fa-bars open"></i>
+            </div>
+            <div class="shareNav d-flex flex-column gap-1">
+                <i class="fa-solid fa-globe"></i>
+                <i class="fa-solid fa-share-nodes"></i>
+            </div>
+        </div>
+    </div>
+
+    <!--####################### Search Section #######################-->
+    <section class="searchContainer">
+        <div class="container">
+            <div class="row" id="searchInputs"></div>
+        </div>
+    </section>
+
+    <!--####################### Home Section #######################-->
+    <section class="home my-3" id="home">
+        <div class="container">
+            <div class="row g-4" id="rowData">
+            </div>
+        </div>
+    </section>
+
+    <!--####################### Model Contact-Us Section #######################-->
+    <div class="model position-fixed top-0 start-0 w-100 h-100 animate__animated d-none justify-content-center align-items-center">
+        <div class="box-model d-flex justify-content-center align-items-center text-white text-center">
+            <span class="load-model"></span>
+            <h2 class="done">Done <i class="fa-regular fa-thumbs-up"></i></h2>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

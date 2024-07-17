@@ -1,0 +1,296 @@
+/*############################################ Blobal Style ############################################*/
+*{
+    transition: all .3s;
+}
+::selection{
+    background-color: #eee;
+    color: #000;
+}
+/* Scrollbar Style */
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px #333; 
+    background-color: #CCC;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 5px;
+    background-color: #050505;
+}
+/* End Scrollbar Style */
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Caveat", cursive;
+    font-weight: bold;
+}
+h3{
+    font-size: 40px;
+}
+h6{
+    font-size: 20px;
+}
+p,a{
+    font-family: "Abel", sans-serif;
+    font-size: 18px;
+}
+input{
+    background-color: transparent !important;
+    color: #fff !important;
+    border: none !important;
+    box-shadow: 0 0 5px 5px #ffffffa1 !important;
+}
+input:focus{
+    box-shadow: 0 0 5px 5px #fff !important;
+
+}
+input::placeholder{
+    color: #aaa !important;
+}
+/*############################################ Navbar Style ############################################*/
+nav{
+    display: none !important;
+}
+@media (max-width:575px) {
+    .sideNav{
+        display: none !important;
+    }
+    nav{
+        display: block !important;
+    }
+    .navbar-brand img{
+        width: 50px
+    }
+    .nav-link{
+        font-size: 18px;
+    }
+    .navbar-toggler-icon{
+        background:none;
+    }
+    .nav-item:hover i{
+        transform: rotate(360deg)
+    }
+    nav .social-icons i{
+        cursor: pointer;
+    }
+}
+.sideNav .logo img{
+    width: 50px
+}
+.sideNav i{
+    cursor: pointer;
+    font-size: 18px;
+}
+.sideNav .open{
+    font-size: 35px;
+}
+.links li{
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    cursor: pointer;
+}
+.links li:hover i{
+    transform: rotate(360deg)
+}
+/*############################################ Home Section Style ############################################*/
+.overlay{
+    background-color: #ffffffb4;
+    opacity: 0;
+    top: 100%;
+}
+.homeBox{
+    box-shadow: 0 0 5px 5px #666666a1;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all .2s;
+    color: #a1a1a1;
+}
+.homeBox:hover{
+    box-shadow: 0 0 5px 5px #fff;
+    color: #fff;
+}
+.homeBox:hover .overlay{
+    top: 0;
+    opacity: 1;
+}
+.homeBox .fa-house-laptop, .homeBox .fa-drumstick-bite{
+    font-size: 80px;
+}
+
+/*############################################ Details Section Style ############################################*/
+.image-detalis{
+    box-shadow: 0 0 5px 5px #c5c5c593;
+}
+.image-detalis:hover{
+    box-shadow: 0 0 5px 5px #fff;
+}
+.spanMeasure,.spanTags{
+    font-family: "Abel", sans-serif;
+    margin:5px;
+    color: #000;
+    padding: 5px 8px;
+    border-radius: 20px;
+}
+.spanMeasure{
+    background: linear-gradient(to right, #007a78, rgb(0, 119, 255));
+    color: #fff;
+}
+.spanTags{
+    background: linear-gradient(to right, #ff5943, rgb(255, 0, 0));
+    color: #fff;
+    font-weight: bold;
+}
+.sourceBtn,.youtubeBtn{
+    font-weight: 700;
+    color: transparent;
+    text-transform: uppercase;
+    animation: move-to-right 2s alternate infinite ease-in-out;
+    transition: all .5s;
+    margin-top: 5px;
+}
+.sourceBtn{
+    background: linear-gradient(to right, #00fffc, rgb(0, 119, 255));
+    background-clip: text;
+    border: 1px solid #00fffc;
+}
+.youtubeBtn{
+    background: linear-gradient(to right, #ff5943, rgb(255, 0, 0));
+    background-clip: text;
+    border: 1px solid #ff5943;
+}
+.sourceBtn:hover{
+    box-shadow: inset 0 0 20px 5px #00fffc;
+    color: transparent;
+}
+.youtubeBtn:hover{
+    box-shadow: inset 0 0 20px 5px #ff5943;
+    color: transparent;
+}
+
+.fa-circle-xmark{
+    cursor: pointer;
+}
+/*############################################ Loading Page Style ############################################*/
+.loading{
+    z-index: 9999;
+    display: none;
+}
+.loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    color: #fff;
+}
+.loader:before,
+.loader:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
+}
+.loader:after {
+    color: #fff;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) rotateZ(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotateZ(360deg);
+    }
+}
+
+@keyframes rotateccw {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+@keyframes spin {
+    0%,
+    100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+    }
+    12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+    }
+    25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+    }
+    37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+    }
+    50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+    }
+    62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+    }
+    75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+    }
+    87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+    }
+}
+/*############################################ Contact-Us Section Style ############################################*/
+#btnSubmit{
+    border: none;
+    box-shadow: 0 0 5px 5px #dc3545;
+    transition: all .5s;
+}
+.model{
+    background-color: #000000b0;
+    z-index: 9999999;
+}
+.done{
+    display: none;
+}
+.load-model {
+    color: #fff;
+    font-family: Consolas, Menlo, Monaco, monospace;
+    font-weight: bold;
+    font-size: 78px;
+    opacity: 0.8;
+}
+.load-model:before {
+    content: "{";
+    display: inline-block;
+    animation: pulse 0.4s alternate infinite ease-in-out;
+}
+.load-model:after {
+    content: "}";
+    display: inline-block;
+    animation: pulse 0.4s 0.3s alternate infinite ease-in-out;
+}
+
+@keyframes pulse {
+    to {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+}
+    
